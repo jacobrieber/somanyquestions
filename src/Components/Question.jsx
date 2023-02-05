@@ -1,21 +1,17 @@
 import React from "react";
+import questionList from "../questionList";
 
-function Question() {
+function Question(props) {
   return (
     <div className="question">
       <div className="questionContent">
         <h1>Here's something to think about.</h1>
         <img
           className="questionImage"
-          src="/Images/Professor Utonium.png"
-          // src="/Images/The sisters.jpeg"
-          alt="Professor Utonium"
+          src={questionList[props.question].url}
+          alt={questionList[props.question].altText}
         />
-        <p>
-          Professor Utonium made the Powerpuff Girls out of sugar, spice, and
-          everything nice (and Chemical X). What ingredients would he use if he
-          were trying to make you?
-        </p>
+        <p>{questionList[props.question].question}</p>
       </div>
     </div>
   );

@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Question from "./Question";
 import NavBar from "./NavBar";
 
 function Tile() {
+  const [questionNum, setquestionNum] = useState(0);
+  
+  function getNumber(num) {
+    setquestionNum(num);
+  }
+
   return (
     <div>
       <div className="tile">
@@ -23,8 +29,8 @@ function Tile() {
         />
         <div className="leftDot dot"></div>
         <div className="rightDot dot"></div>
-        <Question />
-        <NavBar />
+        <Question question = {questionNum} />
+        <NavBar getClick = {getNumber} />
       </div>
     </div>
   );

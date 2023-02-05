@@ -1,6 +1,13 @@
 import React from "react";
+import questionList from "../questionList";
 
-function NavBar() {
+function NavBar(props) {
+  function changeQuestion() {
+    const numberofQuestions = questionList.length;
+    const questionPosition = Math.floor(Math.random() * numberofQuestions);
+    props.getClick(questionPosition);
+  }
+
   return (
     <div className="navigation">
       <a href="about.html">
@@ -13,28 +20,19 @@ function NavBar() {
       </a>
       <a href="https://www.youtube.com/">
         <img
-          src="/Images/upload.png"
-          className="link navItem"
-          alt="upload button"
-          title="Submit a question"
-        ></img>
-      </a>
-      <a href="https://www.youtube.com/">
-        <img
           src="/Images/list.png"
           className="link navItem"
           alt="full question list button"
           title="See full list of questions"
         ></img>
       </a>
-      <a href="https://www.youtube.com/">
-        <img
-          src="/Images/shuffle.png"
-          className="link navItem"
-          alt="shuffle button"
-          title="View a new question"
-        ></img>
-      </a>
+      <img
+        src="/Images/shuffle.png"
+        className="link navItem"
+        alt="shuffle button"
+        title="View a new question"
+        onClick={changeQuestion}
+      ></img>
     </div>
   );
 }

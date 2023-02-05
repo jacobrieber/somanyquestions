@@ -50,18 +50,18 @@ footer p {
   text-align: center;
   padding: 2rem 2rem 0.75rem;
   margin-bottom: 0rem;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  min-height: 15rem;
+  height: 27rem;
 }
 
 .questionImage {
-  max-height: 18em;
+  max-height: 15em;
   max-width: 90%;
   object-fit: contain;
   margin: 1rem;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,7 +75,7 @@ footer p {
   align-items: center;
   justify-content: center;
   margin: 0.1rem auto;
-  border-radius: 3px;
+  border-radius: 10px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -149,5 +149,5 @@ footer p {
 }
 
 .navItem {
-  margin: auto 3rem;
+  margin: auto 3.5rem;
 }
